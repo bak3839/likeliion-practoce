@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/likelion
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: root
+  main:
+    allow-bean-definition-overriding: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+
+logging:
+  level:
+    org.hibernate.sql: debug
+
+decorator:
+  datasource:
+    p6spy:
+      enable-logging: true
